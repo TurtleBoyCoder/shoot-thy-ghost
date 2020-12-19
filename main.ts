@@ -39,8 +39,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         `, choo_choo, 100, 0)
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, otherSprite) {
-    effects.smiles.startScreenEffect()
-    evil_ghost.setPosition(randint(10, 140), randint(10, 120))
+    evil_ghost.setPosition(randint(10, 160), randint(10, 120))
     info.changeScoreBy(1)
     info.startCountdown(10)
     boolEvilGhostMove = 1
@@ -72,7 +71,6 @@ info.onLifeZero(function () {
     evil_ghost.say("ha! I win!")
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    effects.smiles.endScreenEffect()
     info.changeLifeBy(-1)
     choo_choo.setPosition(80, 60)
 })
@@ -126,6 +124,6 @@ evil_ghost = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Enemy)
-evil_ghost.setPosition(randint(0, 160), randint(0, 120))
+evil_ghost.setPosition(randint(10, 160), randint(10, 120))
 info.setLife(5)
 info.setScore(0)
