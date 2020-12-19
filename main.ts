@@ -52,6 +52,14 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, oth
         } else {
         	
         }
+        if (choo_choo.y > evil_ghost.y) {
+            evil_ghost.y += 5
+        } else if (choo_choo.y < evil_ghost.y) {
+            evil_ghost.y += -5
+        } else {
+        	
+        }
+        pause(1000)
     }
 })
 info.onCountdownEnd(function () {
