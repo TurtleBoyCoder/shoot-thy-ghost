@@ -46,9 +46,9 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, oth
     boolEvilGhostMove = 1
     while (boolEvilGhostMove == 1) {
         if (choo_choo.x > evil_ghost.x) {
-            evil_ghost.x += 5
+            evil_ghost.x += 8
         } else if (choo_choo.x < evil_ghost.x) {
-            evil_ghost.x += -5
+            evil_ghost.x += -8
         } else {
         	
         }
